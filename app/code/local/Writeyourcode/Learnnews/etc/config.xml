@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Writeyourcode_Learnnews>
+      <version>1.0.4</version>
+    </Writeyourcode_Learnnews>
+  </modules>
+  <global>   
+	<helpers>
+      <learnnews>
+        <class>Writeyourcode_Learnnews_Helper</class>
+      </learnnews>
+    </helpers>
+    <models>
+      <learnnews>
+        <class>Writeyourcode_Learnnews_Model</class>        
+      </learnnews>      
+    </models>
+  </global>  
+</config>

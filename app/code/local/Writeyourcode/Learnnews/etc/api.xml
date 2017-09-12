@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+  <api>
+    <resources>
+      <learnnews_products translate="title" module="learnnews">
+        <title>learnnews</title>
+        <!-- acl>mymodule/api</acl>-->
+        <model>learnnews/products_api</model>
+        <acl>learnnews/products</acl>
+        <methods>
+          <activeList translate="title" module="learnnews">
+            <title>Active Products</title>
+            <acl>learnnews/products/activelist</acl>
+          </activeList>
+          <inactiveList translate="title" module="learnnews">
+            <title>Inactive Products</title>
+            <acl>learnnews/products/inactiveList</acl>
+          </inactiveList>
+        </methods>
+      </learnnews_products>
+    </resources>
+    <resources_alias>
+      <products>learnnews_products</products>
+    </resources_alias>
+    <v2>
+      <resources_function_prefix>
+        <products>productsapi</products>
+      </resources_function_prefix>
+    </v2>
+    <acl>
+      <resources>
+        <learnnews translate="title" module="learnnews">
+          <title>Products</title>
+          <sort_order>1</sort_order>
+          <products translate="title" module="learnnews">
+            <title>Product List API</title>
+            <sort_order>2000</sort_order>
+            <activeList translate="title" module="learnnews">
+              <title>Active Products</title>
+            </activeList>
+            <inactiveList translate="title" module="learnnews">
+              <title>Inactive Products</title>
+            </inactiveList>
+          </products>
+        </learnnews>
+      </resources>
+    </acl>
+  </api>
+</config>

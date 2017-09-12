@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+  <api>
+    <resources>
+      <[modulename]_[foldername] translate="title" module="[modulename]">
+        <title>learnnews</title>
+        <!-- acl>mymodule/api</acl>-->
+        <model>[modulename]/[foldername]_api</model>
+        <acl>[modulename]/[foldername]</acl>
+        <methods>
+          <activeList translate="title" module="[modulename]">
+            <title>Active Products</title>
+            <acl>[modulename]/[foldername]/activelist</acl>
+          </activeList>
+          <inactiveList translate="title" module="[modulename]">
+            <title>Inactive Products</title>
+            <acl>[modulename]/[foldername]/inactiveList</acl>
+          </inactiveList>
+        </methods>
+      </[modulename]_[foldername]>
+    </resources>
+    <resources_alias>
+      <[foldername]>[modulename]_[foldername]</[foldername]>
+    </resources_alias>
+    <v2>
+      <resources_function_prefix>
+        <[foldername]>productsapi</[foldername]><!--this will be your prefix for the function in V2 for me its productapi-->
+      </resources_function_prefix>
+    </v2>
+    <acl>
+      <resources>
+        <[modulename] translate="title" module="[modulename]">
+          <title>Title Of API</title>
+          <sort_order>1</sort_order>
+          <[foldername] translate="title" module="[modulename]">
+            <title>Product List API</title>
+            <sort_order>2000</sort_order>
+            <activeList translate="title" module="[modulename]">
+              <title>Active Products</title>
+            </activeList>
+            <inactiveList translate="title" module="[modulename]">
+              <title>Inactive Products</title>
+            </inactiveList>
+          </[foldername]>
+        </[modulename]>
+      </resources>
+    </acl>
+  </api>
+</config>
